@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTheme">
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvEmail"
+            android:orientation="vertical"
+            tools:context=".activity.WelcomeActivity">
+
+            <RelativeLayout
+                android:id="@+id/topLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:orientation="vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg_half_circle" />
+
+                <!--<androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    app:srcCompat="@drawable/ic_welcome" />-->
+
+                <com.lr.androidfeature.customclasses.AspectRatioImageView
+                    android:id="@+id/ivWelcome"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="@dimen/_250sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_welcome_bannerr" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivWelcome"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/inter_bold"
+                android:includeFontPadding="false"
+                android:text="@string/str_welcome"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_28sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVal"
+                style="@style/textStyleSemiBold10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_below="@id/tvWelcome"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:letterSpacing="0.33"
+                android:text="@string/str_welcome_full_name"
+                android:textColor="@color/colorWhite" />
+
+            <com.lr.androidfeature.customclasses.AspectRatioImageView
+                android:id="@+id/ivlogo"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@+id/tvVal"
+                android:transitionName="wlcm_app_logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_launcher" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                style="@style/customButtonStyle"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:background="@drawable/bg_solid_white_radius_20"
+                android:onClick="@{(v)-> clickListener.onClick(v)}"
+                android:text="@string/str_login"
+                android:textColor="@color/colorTheme" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                style="@style/customButtonStyle"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_below="@id/btnLogin"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:background="@drawable/bg_solid_theme_radius_20_stroke"
+                android:onClick="@{(v)-> clickListener.onClick(v)}"
+                android:text="@string/str_register" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            style="@style/textStyleBold10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvCall"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableStart="@drawable/ic_mail"
+            android:drawablePadding="@dimen/_8sdp"
+            android:gravity="center"
+            android:onClick="@{(v)-> clickListener.onClick(v)}"
+            android:text="@string/str_vlpl_connect_com"
+            android:textColor="@color/colorWhite" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCall"
+            style="@style/textStyleBold10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_phone_call"
+            android:drawablePadding="@dimen/_8sdp"
+            android:gravity="center"
+            android:onClick="@{(v)-> clickListener.onClick(v)}"
+            android:text="@string/str_contact_number"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="vm"
+            type="com.lr.androidfeature.viewmodel.LoginViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activity.LoginActivity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:onClick="@{(v)->clickListener.onClick(v)}"
+                    android:src="@drawable/ic_back_button" />
+
+                <com.lr.androidfeature.customclasses.AspectRatioImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_launcher"
+                    android:transitionName="wlcm_app_logo" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/containerToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_16sdp"
+                android:background="@color/colorBackground"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBack">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitle"
+                        style="@style/textStyleBold24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="@string/str_login"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:background="@color/colorYellow" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSubTitle"
+                    style="@style/textStyleRegular10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/str_let_get_started" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/colorDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:background="@drawable/bg_solid_white"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:id="@+id/layoutAllUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="@{()-> vm.chooseUserTypeRadioBtn(1)}"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRbAll"
+                            style="@style/textStyleMedium10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:text="@string/str_stockist_retailer_n_institute_doctor"
+                            android:textColor="@color/colorTheme"
+                            app:drawableStartCompat="@drawable/ic_radio_selected" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_radio_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutMrUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="@{()-> vm.chooseUserTypeRadioBtn(2)}">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRbMr"
+                            style="@style/textStyleMedium10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:gravity="center_vertical"
+                            android:text="@string/str_mr"
+                            android:textColor="@color/colorTheme"
+                            app:drawableStartCompat="@drawable/ic_radio_unselect" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.lr.androidfeature.customclasses.CustomEditText
+                    android:id="@+id/etEmail"
+                    style="@style/textStyleSemiBold10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:hint="@string/str_enter_your_email"
+                    android:inputType="textEmailAddress"
+                    app:emptyValidateText="@string/validation_email"
+                    app:isAllowSpace="false"
+                    app:validateType="@string/validate_type_email"
+                    app:valueText="@string/str_email" />
+
+                <com.lr.androidfeature.customclasses.CustomEditText
+                    android:id="@+id/etPassword"
+                    style="@style/textStyleSemiBold10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_password"
+                    android:hint="@string/str_enter_your_password"
+                    android:inputType="textPassword"
+                    app:emptyValidateText="@string/validation_password"
+                    app:isAllowSpace="false"
+                    app:validateType="@string/validate_type_password"
+                    app:valueText="@string/str_password" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLostPassword"
+                    style="@style/textStyleMedium10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:onClick="@{(v)->clickListener.onClick(v)}"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/str_lost_password"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/colorYellow" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoginButton"
+                    style="@style/customButtonStyle"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:onClick="@{(v)->clickListener.onClick(v)}"
+                    android:text="@string/str_login" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCrateAnAccount"
+                    style="@style/textStyleRegular10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:onClick="@{(v)->clickListener.onClick(v)}"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/str_create_an_account"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGetInTouch"
+                    style="@style/textStyleRegular10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="@{(v)->clickListener.onClick(v)}"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/str_create_an_account"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

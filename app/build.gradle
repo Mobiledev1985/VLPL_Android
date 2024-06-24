@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+apply from : 'dependencies.gradle'
+
+android {
+    namespace 'com.lr.androidfeature'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.lr.androidfeature"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("config.properties").newDataInputStream())
+
+        buildConfigField "String", "BASE_URL", "\"${properties.getProperty("BASE_URL")}\""
+        buildConfigField "String", "PRIVACY_POLICY_URL", "\"${properties.getProperty("PRIVACY_POLICY_LINK")}\""
+        buildConfigField "String", "TERM_CONDITION_URL", "\"${properties.getProperty("TERMS_CONDITION_LINK")}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding  true
+        dataBinding  true
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //dimensions
+    implementation intuitDependencies.sdp
+    implementation intuitDependencies.ssp
+
+    //glide
+    implementation glideDependencies.glide
+    kapt glideDependencies.glide_compiler
+
+    //retrofit
+    implementation retrofitDependencies.retrofit
+    implementation retrofitDependencies.converter_gson
+    implementation retrofitDependencies.logging_interceptor
+
+    //share preference
+    implementation otherDependencies.ktx_version
+
+    //indicator
+    implementation otherDependencies.dot_indicator
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="185dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_solid_white_radius_5"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:background="@color/demo_light_transparent" />
+
+        <View
+            android:id="@+id/tvDescription"
+            style="@style/textStyleMedium10"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/demo_light_transparent"
+            android:ellipsize="end"
+            android:gravity="center_vertical" />
+
+        <View
+            style="@style/textStyleMedium10"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/demo_light_transparent"
+            android:ellipsize="end"
+            android:gravity="center_vertical" />
+
+        <View
+            style="@style/textStyleSemiBold8"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/demo_light_transparent" />
+
+        <View
+            style="@style/textStyleBold10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/demo_light_transparent" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

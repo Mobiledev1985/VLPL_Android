@@ -1,0 +1,32 @@
+ext{
+    //dimensions
+    intuitVersion = '1.0.6'
+    intuitDependencies = [
+            sdp : "com.intuit.sdp:sdp-android:${intuitVersion}",
+            ssp : "com.intuit.ssp:ssp-android:${intuitVersion}"
+    ]
+
+    //glide
+    glideVersion = '4.13.0'
+    glideDependencies =[
+            glide : "com.github.bumptech.glide:glide:${glideVersion}",
+            glide_compiler : "com.github.bumptech.glide:compiler:${glideVersion}"
+    ]
+
+    //retrofit
+    retrofitVersion = "2.9.0"
+    interceptorVersion = "4.9.3"
+    retrofitDependencies = [
+            retrofit : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            converter_gson : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            logging_interceptor : "com.squareup.okhttp3:logging-interceptor:${interceptorVersion}"
+    ]
+
+    //Other dependencies
+    preferenceVersion = "1.2.0"
+    dotIndicatorVersion = "4.3"                 // Dot indicator
+    otherDependencies = [
+            ktx_version : "androidx.preference:preference-ktx:${preferenceVersion}",
+            dot_indicator : "com.tbuonomo:dotsindicator:${dotIndicatorVersion}",
+    ]
+}

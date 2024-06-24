@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_no_internet" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/textStyleBold14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.1"
+        android:text="@string/str_no_internet_title"
+        android:textColor="@color/colorWhite" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnTryAgain"
+        style="@style/customButtonStyle"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_solid_white_radius_10"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:text="@string/str_try_again"
+        android:textColor="@color/colorTheme" />
+
+</LinearLayout>

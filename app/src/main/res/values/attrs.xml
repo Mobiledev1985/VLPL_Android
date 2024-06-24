@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="StepperIndicator" tools:ignore="ResourceName">
+        <attr name="stpi_stepCount" format="integer" />
+        <attr name="stpi_animDuration" format="integer" />
+
+        <attr name="stpi_circleColor" format="color" />
+        <attr name="stpi_circleRadius" format="dimension" />
+        <attr name="stpi_circleStrokeWidth" format="dimension" />
+
+        <attr name="stpi_indicatorColor" format="color" />
+        <attr name="stpi_indicatorRadius" format="dimension" />
+
+        <attr name="stpi_lineColor" format="color" />
+        <attr name="stpi_lineDoneColor" format="color" />
+        <attr name="stpi_lineStrokeWidth" format="dimension" />
+        <attr name="stpi_lineMargin" format="dimension" />
+
+        <attr name="stpi_showDoneIcon" format="boolean" />
+        <attr name="stpi_showStepNumberInstead" format="boolean" />
+        <attr name="stpi_doneIconDrawable" format="reference" />
+
+        <attr name="stpi_useBottomIndicator" format="boolean" />
+        <attr name="stpi_useBottomIndicatorWithStepColors" format="boolean" />
+        <attr name="stpi_bottomIndicatorHeight" format="dimension" />
+        <attr name="stpi_bottomIndicatorWidth" format="dimension" />
+        <attr name="stpi_bottomIndicatorMarginTop" format="dimension" />
+
+        <attr name="stpi_stepsCircleColors" format="reference" />
+        <attr name="stpi_stepsIndicatorColors" format="reference" />
+
+        <attr name="stpi_labels" format="reference" />
+        <attr name="stpi_showLabels" format="boolean" />
+        <attr name="stpi_labelMarginTop" format="dimension" />
+        <attr name="stpi_labelSize" format="dimension" />
+        <attr name="stpi_labelColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="valueText" format="string" />
+        <attr name="emptyValidateText" format="string" />
+        <attr name="validateType" format="string" />
+        <attr name="imageVisible" format="boolean" />
+        <attr name="isAllowSpace" format="boolean" />
+        <attr name="dynamicHeight" format="integer" />
+        <attr name="android:imeOptions" />
+        <attr name="android:enabled"/>
+        <attr name="android:drawableStart" />
+        <attr name="android:hint" />
+        <attr name="android:maxLength" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLines" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomDropDown">
+        <attr name="dropDownValueText" format="string" />
+        <attr name="dropDownEmptyValidateText" format="string" />
+        <attr name="dropDownFirstIndexValue" format="string" />
+        <attr name="android:enabled"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomMenuItem">
+        <attr name="menuTitle" format="string" />
+        <attr name="menuIcon" format="reference" />
+        <attr name="isShowNextIcon" format="boolean" />
+        <attr name="cardBackgroundColor" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomToolBar">
+        <attr name="title" format="string" />
+        <attr name="isShowEndIcon" format="boolean" />
+        <attr name="isShowBackIcon" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomDocumentPicker">
+        <attr name="titleText" format="string" />
+        <attr name="docEmptyValidateText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ShimmerRecyclerView">
+        <attr name="shimmer_demo_layout" format="reference" />
+        <attr name="shimmer_demo_child_count" format="integer|reference" />
+        <attr name="shimmer_demo_layout_manager_type" format="enum">
+            <enum name="linear_vertical" value="0" />
+            <enum name="linear_horizontal" value="1" />
+            <enum name="grid" value="2" />
+        </attr>
+        <attr name="shimmer_demo_grid_child_count" format="integer|reference" />
+        <attr name="shimmer_demo_shimmer_color" format="color|reference" />
+        <attr name="shimmer_demo_angle" format="integer|reference" />
+        <attr name="shimmer_demo_view_holder_item_background" format="color|reference" />
+        <attr name="shimmer_demo_duration" format="integer|reference" />
+        <attr name="shimmer_demo_mask_width" format="float|reference" />
+        <attr name="shimmer_demo_reverse_animation" format="boolean|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ShimmerLayout">
+        <attr name="shimmer_color" format="color|reference"/>
+        <attr name="shimmer_animation_duration" format="integer|reference"/>
+        <attr name="shimmer_auto_start" format="boolean|reference"/>
+        <attr name="shimmer_angle" format="integer|reference"/>
+        <attr name="shimmer_mask_width" format="float|reference"/>
+        <attr name="shimmer_gradient_center_color_width" format="float|reference"/>
+        <attr name="shimmer_reverse_animation" format="boolean|reference"/>
+    </declare-styleable>
+
+</resources>

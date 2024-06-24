@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Android Project</string>
+
+    <string name="str_welcome">Welcome</string>
+    <string name="str_welcome_full_name">ANDROID PROJECT</string>
+    <string name="str_let_get_started">Hello! Let’s get started</string>
+    <string name="str_login">Login</string>
+    <string name="str_register">Register</string>
+    <string name="str_enter_your_email">Enter your email</string>
+    <string name="str_enter_your_password">Enter your password</string>
+    <string name="str_email">Email*</string>
+    <string name="str_password">Password*</string>
+    <string name="str_lost_password">Lost your password?</string>
+    <string name="str_stockist_retailer_n_institute_doctor">Stockist / Retailer\nInstitute / Doctor</string>
+    <string name="str_mr">MR</string>
+    <string name="str_create_an_account"> Create An Account</string>
+    <string name="str_get_in_touch"> Contact Us</string>
+    <string name="str_not_have_account">Don’t Have An Account Yet?</string>
+    <string name="str_need_help">Need Help?</string>
+    <string name="str_home">Home</string>
+    <string name="str_profile">Profile</string>
+    <string name="str_incentive">Incentive</string>
+    <string name="str_cart">Cart</string>
+    <string name="str_hello">Hello</string>
+    <string name="str_edit">Edit</string>
+    <string name="str_rs">Rs.</string>
+    <string name="str_no_internet_title">No internet connection found\ncheck your connection</string>
+    <string name="str_try_again">Try Again</string>
+
+
+    <!--    Validation Text-->
+    <string name="validation_email">Please enter email address</string>
+    <string name="validation_phone_number">Please enter phone number</string>
+    <string name="validation_email_pattern">Please enter valid email</string>
+    <string name="validation_gst_pattern">Please enter valid GST number</string>
+    <string name="validation_password">Please enter password</string>
+    <string name="validation_conform_password">Password does not match</string>
+    <string name="validation_password_length">Password must be 6 to 15 characters.</string>
+    <string name="validation_pin_code_length">Pin must be of 6 digit</string>
+    <string name="validation_mobile_length">Please enter 10 digits number</string>
+
+    <!--    validation type-->
+    <string name="validate_type_mobile">mobile</string>
+    <string name="validate_type_email">email</string>
+    <string name="validate_type_empty">empty</string>
+    <string name="validate_type_gst">gst</string>
+    <string name="validate_type_username">username</string>
+    <string name="validate_type_password">password</string>
+    <string name="validate_type_password_strong">password_strong</string>
+    <string name="validate_type_confirm_password">confirm_strong</string>
+    <string name="validate_type_pin_code">pincode</string>
+
+
+    <string name="str_contact_number">+91 985 582 0410</string>
+    <string name="str_your_price">Your Price*</string>
+    <string name="str_your_amount">Your Amount</string>
+    <string name="str_vlpl_connect_com">android@connect.com</string>
+
+</resources>

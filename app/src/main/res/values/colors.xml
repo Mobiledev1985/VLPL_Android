@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#005778</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorDarkGray">#4D4D4D</color>
+    <color name="colorGray">#767676</color>
+    <color name="colorHintText">#B2BBBB</color>
+    <color name="colorLightGray">#C4C4C4</color>
+    <color name="colorDivider">#33005778</color>
+    <color name="colorPlaceHolder">#E4E4E4</color>
+    <color name="colorHintText10">#1AB2BBBB</color>
+    <color name="colorTheme">#005778</color>
+    <color name="colorSubSkyLightBlue">#C5F5DB</color>   //
+    <color name="colorSubLightBlue">#C5F5F2</color>   //
+    <color name="colorSkyBlue">#3300E2E2</color>
+    <color name="colorWelcomeStatusBar">#FCFEFF</color>
+    <color name="colorLightDarkBlue">#3368B1F4</color>
+    <color name="colorBackground">#F2F6F8</color>
+    <color name="colorLightPink">#33F4B468</color>
+    <color name="colorLightDarkPink">#33FF98BD</color>
+    <color name="colorSubLightPink">#EEF5C5</color>  //
+    <color name="colorGreen">#00A455</color>
+    <color name="colorLightGreen">#5ED401</color>
+    <color name="colorSubGreen">#DEFFC5</color>    //
+    <color name="colorRed">#FD4848</color>
+    <color name="colorYellow">#F58220</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOrderProcess">#ADC000</color>
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="default_shimmer_color">#73ffffff</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorCardContactUs">#FDECD8</color>
+    <color name="colorOfferBack">#FE5E5E</color>
+</resources>
+

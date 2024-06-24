@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabel"
+            style="@style/textStyleRegular10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hello" />
+
+        <RelativeLayout
+            android:gravity="center"
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabel">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et"
+                style="@style/textStyleSemiBold10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:gravity="center"
+                android:drawablePadding="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/bg_solid_white_radius_5"
+                android:ems="10"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorTheme"
+                android:textColorHint="@color/colorHintText"
+                android:textCursorDrawable="@drawable/color_cursor"
+                tools:hint="Enter" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:contentDescription="@string/str_hello"
+                android:padding="@dimen/_10sdp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_visible_on" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            style="@style/textStyleRegular10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/rl"
+            app:layout_constraintTop_toBottomOf="@+id/rl" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>
